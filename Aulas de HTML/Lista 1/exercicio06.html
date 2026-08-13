@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+    <style>
+        button {
+            border-radius: 5px ;
+            margin: 10px;
+        }
+
+        #pare {
+            border-color: rgb(0, 0, 0);
+            color: rgb(15, 13, 13);
+            background-color: red;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.192);
+        }
+
+        #pense {
+            border-color: rgb(0, 0, 0);
+            color: rgb(15, 13, 13);
+            background-color: rgb(229, 255, 0);
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.192);
+        }
+
+        #siga {
+            border-color: rgb(0, 0, 0);
+            color: rgb(15, 13, 13);
+            background-color: rgb(0, 255, 76);
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.192);
+        }
+
+
+    </style>
+</head>
+<body>
+    <button onclick="pare()" id="pare">Pare</button>
+    <button onclick="pense()" id="pense">Pense</button>
+    <button onclick="siga()" id="siga">Siga</button>
+</body>
+</html>
+<script>
+    function pare() {
+        alert ('Pare e Aguarde!')
+    }
+
+    function pense() {
+        alert ('Pense se pode seguir ou se deve parar!')
+    }
+
+    function siga() {
+        alert ('Pode seguir adiante')
+    }
+</script>
