@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+    <!-- Um campo para inserir o Nome da Rua/Avenida/Vila
+Um campo para inserir o Número da Casa
+Um botão com o texto "Onde eu moro"
+Ao clicar no botão, as seguintes mensagens devem aparecer:
+"Seu logradouro é X" (onde X é o nome da rua/avenida digitada)
+"O número do seu logradouro é Y" (onde Y é o número da casa informado) -->
+
+    <span>Nome da Rua/Avenida/Vila: </span>
+    <input type="text" id="input_rua">
+    <br>
+    <span>Número da casa: </span>
+    <input type="text" id="input_num">
+    <br>
+    <button onclick="cadastrar()">Cadastrar</button>
+</body>
+</html>
+<script>
+    function cadastrar() {
+        alert ('Seu logradouro é ' + input_rua.value)
+        alert ('O número do seu logradouro é ' + input_num.value)
+    }
+</script> 
