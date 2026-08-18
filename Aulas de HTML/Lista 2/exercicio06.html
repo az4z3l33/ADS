@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+</head>
+<body>
+    <span>Informe a quantidade de B-Dollars</span>
+    <input type="number" id="input_dollar">
+    <br>
+    <span>Informe a cotação: </span>
+    <input type="number" id="input_cota">
+    <br>
+    <button onclick="cota()">Calcular câmbio</button>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+    function cota() {
+    let n1 = Number(input_dollar.value)
+    let n2 = Number(input_cota.value)
+    let result = n1 * n2
+
+        div_result.innerHTML = `Ao converter seus B-Dollars, o dinheiro disponível será de ${(result - Number(5.50))}`
+    }
+</script>
