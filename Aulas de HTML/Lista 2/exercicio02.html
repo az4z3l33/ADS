@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <span>Valor da pizza: </span>
+    <input type="number" id="input_preco">
+    <br>
+    <span>Quantos amigos comerão: </span>
+    <input type="number" id="input_amigos">
+    <br>
+    <button onclick="pizza()">#lovepizza</button>
+    <div id="div_result">
+
+    </div>
+</body>
+</html>
+<script>
+    function pizza() {
+        let n1 = Number(input_preco.value)
+        let n2 = Number(input_amigos.value)
+
+        div_result.innerHTML = `Cada um dos ${n2} amigos vai pagar R$${n1 / n2}`
+    }
+</script>

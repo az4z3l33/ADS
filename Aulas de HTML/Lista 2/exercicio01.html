@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ept-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <span>Informe a sua idade: </span>
+    <input type="number" id="input_idade">
+    <br>
+    <button onclick="homem()">Aposentadoria homem</button>
+    <button onclick="mulher()">Aposentadoria mulher</button>
+    <div id="div_result">
+
+    </div>
+</body>
+</html>
+<script>
+
+function homem() {
+    let n1 = Number(input_idade.value);
+
+    div_result.innerHTML = `Você se aposentará em ${ Number(70) - n1} anos.`;
+}
+
+function mulher() {
+    let n1 = Number(input_idade.value);
+
+    div_result.innerHTML = `Você se aposentará em ${ Number(60) - n1} anos.`;
+ }
+
+</script>

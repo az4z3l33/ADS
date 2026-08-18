@@ -45,18 +45,25 @@
     <button onclick="pare()" id="pare">Pare</button>
     <button onclick="pense()" id="pense">Pense</button>
     <button onclick="siga()" id="siga">Siga</button>
+    
+    <div id="div_exibir">
+    
+    </div>
 </body>
 </html>
 <script>
     function pare() {
-        alert ('Pare e Aguarde!');
+        // alert ('Pare e Aguarde!');
+        div_exibir.innerHTML = 'Pare e aguarde!'
     }
 
     function pense() {
-        alert ('Pense se pode seguir ou se deve parar!');
+        // alert ('Pense se pode seguir ou se deve parar!');
+        div_exibir.innerHTML = 'Pense se pode seguir ou se deve parar!'
     }
 
     function siga() {
-        alert ('Pode seguir adiante');
+        // alert ('Pode seguir adiante');
+        div_exibir.innerHTML = 'Pode seguir adiante!'
     }
 </script>

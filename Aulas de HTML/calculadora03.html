@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora 2</title>
+    <style>
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" id="input_num1">
+    <input type="number" id="input_num2">
+    <br>
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <button onclick="multiplicar()">Multiplicar</button>
+    <button onclick="dividir()">Dividir</button>
+    <div id="div_result">
+
+    </div>
+</body>
+</html>
+<script>
+    function somar() {
+    let n1 = Number(input_num1.value);
+    let n2 = Number(input_num2.value);
+    let result = n1 + n2;
+
+        div_result.innerHTML = `O resultado da soma é:  ${result}`;
+    }
+
+    function subtrair() {
+    let n1 = Number(input_num1.value);
+    let n2 = Number(input_num2.value);
+    let result = n1 - n2;
+
+        div_result.innerHTML = `O resultado da subtração é: ${result}`;
+    }
+
+    function multiplicar() {
+    let n1 = Number(input_num1.value);
+    let n2 = Number(input_num2.value);
+    let result = n1 * n2;
+
+        div_result.innerHTML =
+        `O resultado da multiplicação é: ${result}`;
+    }
+
+    function dividir() {
+    let n1 = Number(input_num1.value);
+    let n2 = Number(input_num2.value);
+    let result = n1 / n2;
+
+        div_result.innerHTML = `O resultado da divisão é: ${result}`;
+    }
+</script>
