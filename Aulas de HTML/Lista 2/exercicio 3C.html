@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    <span>Nome do aluno: </span>
+    <input type="text" id="input_aluno">
+    <br>
+    <span>Informe a nota da Atividade 1</span>
+    <input type="number" id="input_n1">
+    <br>
+    <span>Informe a nota da Atividade 2</span>
+    <input type="number" id="input_n2">
+    <br>
+    <span>Informe a nota da Atividade 3</span>
+    <input type="number" id="input_n3">
+    <br>
+    <button onclick="nota()">Mostrar nota</button>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+    function nota() {
+        let n1 = Number(input_n1.value)
+        let n2 = Number(input_n2.value)
+        let n3 = Number(input_n3.value)
+        let soma = n1 + n2 + n3
+        let media = soma / 3
+
+        div_result.innerHTML = `A soma das suas três atividades é: ${soma} <br> ${input_aluno.value}, a média das suas atividade é: ${media}`
+    }
+</script>

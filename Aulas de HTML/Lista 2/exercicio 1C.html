@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio Complementar 1</title>
+</head>
+<body>
+    <span>Informe um número X</span>
+    <input type="number" id="input_n1">
+    <br>
+    <span>Informe um número Y</span>
+    <input type="number" id="input_n2">
+    <br>
+    <button onclick="soma()">Soma</button>
+    <button onclick="diferenca()">Diferença</button>
+    <button onclick="produto()">Produto</button>
+    <button onclick="razao()">Razão</button>
+    <div id="div_result">
+
+    </div>
+</body>
+</html>
+<script>
+    function  soma() {
+        let n1 = Number(input_n1.value)
+        let n2 = Number(input_n2.value)
+
+        div_result.innerHTML = `A soma entre ${n1} e ${n2} é ${n1 + n2}`
+
+    }
+
+    function diferenca() {
+        let n1 = Number(input_n1.value)
+        let n2 = Number(input_n2.value)
+
+        div_result.innerHTML = `A diferença entre ${n1} e ${n2} é ${n1 - n2}`
+    }
+
+    function produto() {
+        let n1 = Number(input_n1.value)
+        let n2 = Number(input_n2.value)
+
+        div_result.innerHTML = `O produto entre ${n1} e ${n2} é ${n1 * n2}`
+    }
+
+    function razao() {
+        let n1 = Number(input_n1.value)
+        let n2 = Number(input_n2.value)
+
+        div_result.innerHTML = `A razão entre ${n1} e ${n2} é ${n1 / n2}`
+    }
+
+</script>

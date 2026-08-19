@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 4</title>
+</head>
+<body>
+    <span>Nota da continuada: </span>
+    <input type="number" id="input_n1">
+    <br>
+    <span>Nota da semestral: </span>
+    <input type="number" id="input_n2">
+    <br>
+    <span>Nome do aluno: </span>
+    <input type="text" id="input_aluno">
+    <br>
+    <button onclick="media()">Calcular média</button>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+    function media () {
+        let n1 = Number(input_n1.value)
+        let n2 = Number(input_n2.value)
+        let MEDIA = (n1 + n2) / 2
+        let NOME = input_aluno.value
+
+        div_result.innerHTML = `A média de ${NOME} será de ${MEDIA}.`
+    }
+</script> 

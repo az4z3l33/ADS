@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <span>Informe as horas de sono: </span>
+    <input type="number" id="input_sono">
+    <br>
+    <button onclick="calcular()">Calcular Sono</button>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        let n1 = Number(input_sono.value)
+        let A = n1 * Number(0.05)
+        let B = n1 * Number(0.45)
+        let C = n1 * Number(0.3)
+        let D = n1 * Number(0.2)
+
+        div_result.innerHTML = `Ao dormir ${n1} horas de sono ele dormiu 
+        <br>
+        ${A} horas na fase 1 <br>
+        ${B} horas na fase 2 <br>
+        ${C} horas na fase 3 <br>
+        ${D} horas na fase REM
+        `
+    }
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+</head>
+<body>
+    <span>Votos do Candidato A: </span>
+    <input type="number" id="input_n1">
+    <br>
+    <span>Votos Candidato B: </span>
+    <input type="number" id="input_n2">
+    <br>
+    <span>Votos brancos: </span>
+    <input type="number" id="input_brancos">
+    <br>
+    <span>Votos Nulos: </span>
+    <input type="number" id="input_nulos">
+    <br>
+    <button onclick="votos()">Resultado da eleição</button>
+    <br>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+    function votos() {
+        let n1 = Number(input_n1.value)
+        let n2 = Number(input_n2.value)
+        let n3 = Number(input_brancos.value)
+        let n4 = Number(input_nulos.value)
+        let total = n1 + n2 + n3 + n4
+        let A = (n1 / total) * 100
+        let B = (n2 / total) * 100
+        let brancos = (n3 / total) * 100
+        let nulos = (n4 / total) * 100
+        let invalidos = brancos + nulos
+
+        div_result.innerHTML = 
+        `Total de votos: ${total} <br>
+        Candidato A: ${A}%(${n1} votos) <br>
+        Candidato B: ${B}%(${n2} votos) <br>
+        Inválidos: ${invalidos}%(${n3 + n4} votos) 
+        `
+    }
+</script>
