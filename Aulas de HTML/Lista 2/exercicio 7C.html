@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7C</title>
+</head>
+<body>
+    <h1>Pedindo pizza!</h1>
+    <span>Sabor: </span>
+    <input type="text" id="input_sabor">
+    <br>
+    <span>Preço da pizza: </span>
+    <input type="number" id="input_valor">
+    <br>
+    <span>Quandos amigos irão comer?</span>
+    <input type="number" id="input_amigos">
+    <br>
+    <button onclick="valor()">Ver valor por amigo</button>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+    function valor() {
+        let n1 = Number(input_valor.value)
+        let n2 = Number(input_amigos.value)
+        let caixinha = n1 * Number(0.1)
+        let total = n1 + caixinha
+        let amigo = total / n2
+        let sabor = input_sabor.value
+
+        div_result.innerHTML = `Cada amigo vai colaborar com R$${amigo} para a pizza de ${sabor}`
+    }
+</script>
