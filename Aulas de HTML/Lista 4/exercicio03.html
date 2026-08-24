@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+    <style>
+        div#div_result {
+                border: 1px solid black;
+                width: fit-content;
+                padding: 3px;
+                margin: 2px;
+            }
+    </style>
+</head>
+<body>
+    <h1>Controle de notas</h1>
+    <span>Insira nota 1: </span>
+    <input type="number" id="input_n1">
+    <br>
+    <span>Insira nota 2: </span>
+    <input type="number" id="input_n2">
+    <br>
+    <span>Insira nota 3: </span>
+    <input type="number" id="input_n3">
+    <br>
+    <button onclick="analisar()">Analisar desempenho</button>
+    <div id="div_result"></div>
+    
+</body>
+</html>
+<script>
+
+    function analisar() {
+        let n1 = Number(input_n1.value)
+        let n2 = Number(input_n2.value)
+        let n3 = Number(input_n3.value)
+        let soma = n1 + n2 + n3
+        let media = soma / Number(3)
+
+        div_result.innerHTML = `Sua média foi de ${media}`
+
+        if(media > 9.4) {
+            div_result.innerHTML += `<br> Parabéns! você é fora de série!`
+        }
+    }
+</script>

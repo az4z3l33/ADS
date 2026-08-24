@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+    <style>
+        div#div_result {
+                border: 1px solid black;
+                width: fit-content;
+                padding: 3px;
+                margin: 2px;
+            }
+
+    </style>
+</head>
+<body>
+    <h1>Rola a pizza?</h1>
+    <span>Valor da pizza: </span>
+    <input type="number" id="input_valor">
+    <br>
+    <span>Quantidade de amigos: </span>
+    <input type="number" id="input_amigos">
+    <br>
+    <button onclick="pizza()">Rola a pizza?</button>
+    <div id="div_result"></div>
+</html>
+<script>
+    
+    function pizza() {
+        let n1 = Number(input_valor.value)
+        let n2 = Number(input_amigos.value)
+        let soma = n1 / n2
+
+        div_result.innerHTML = `Cada amigo vai pagar R$${soma} pela pizza`
+
+        if(soma > 20) {
+            
+        div_result.innerHTML += `<br><i style="color: red;"><b>Deu ruim! Pizza muito cara!<i><b>`
+        }
+
+    }
+</script>

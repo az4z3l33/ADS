@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<body>
+    <h1>Vai ter festa!</h1>
+    <span>Insira sua idade: </span>
+    <input type="number" id="input_idade">
+    <br>
+    <button onclick="verificar()">Ir para festa</button>
+</body>
+</html>
+<script>
+    function verificar() {
+        let idade = Number(input_idade.value)
+
+        if(idade >= 18) {
+            alert('#partiuFesta')
+        } else {
+            alert('Pedir permissão ao responsável')
+        }
+    }
+</script>

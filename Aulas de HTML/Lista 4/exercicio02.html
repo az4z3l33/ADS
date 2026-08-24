@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 2</title>
+    <style>
+        div#div_result {
+                border: 1px solid black;
+                width: fit-content;
+                padding: 3px;
+                margin: 2px;
+            }
+    </style>
+</head>
+<body>
+    <h1>Controle de refrigerante</h1>
+    <span>Quantas latas você toma quantas latas por dia?</span>
+    <input type="number" id="input_lata">
+    <br>
+    <button onclick="verificar()">verificar</button>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+    function verificar() {
+        let lata = Number(input_lata.value)
+        let verify = lata * Number(365)
+
+        div_result.innerHTML = `Você bebe ${verify} latinhas por ano!`
+
+        if(verify >= 500) {
+            div_result.innerHTML += ` Cuidado com a diabetes!`
+        }
+    }
+</script>

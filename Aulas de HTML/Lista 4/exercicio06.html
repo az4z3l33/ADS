@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+</head>
+<body>
+    <h1>Conta de luz</h1>
+    <span>Insira KWh consumida: </span>
+    <input type="number" id="input_kwh">
+    <br>
+    <button onclick="calcular()">Calcular conta de luz: </button>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        let n1 = Number(input_kwh.value)
+        let conta = n1 * Number(0.85)
+        let porcentagem = conta * Number(0.1)
+        let desconto = conta - porcentagem
+        
+
+        if(n1 < 100) {
+            alert(`Você irá pagar R$${desconto}`)
+        } else {alert(`Você irá pagar R$${conta}`)}
+
+
+    }
+</script>
