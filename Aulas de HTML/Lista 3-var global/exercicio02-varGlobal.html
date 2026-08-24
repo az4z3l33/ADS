@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#div_result {
+            border: 1px solid black;
+            width: fit-content;
+            padding: 3px;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Depósitar ou retirar</h1>
+    <span>Insira valor para depositar: </span>
+    <input type="number" id="input_depositar">
+    <br>
+    <button onclick="depositar()">Depositar</button>
+    <br>
+    <span>Insita valor para retirar: </span>
+    <input type="number" id="input_retirar">
+    <br>
+    <button onclick="retirar()">Retirar</button>
+    <br>
+    <div id="div_result"></div>
+
+</body>
+</html>
+<script>
+    let valor = 0;
+
+    function depositar() {
+        let deposito = Number(input_depositar.value);
+        valor += deposito;
+
+        div_result.innerHTML = `Depósito de R$${deposito} <br/>
+        Salto atual: R$${valor}`;
+    }
+
+    function retirar() {
+        let retirada = Number(input_retirar.value);
+        valor -= retirada;
+
+        div_result.innerHTML = `Retirada de R$${retirada} <br/>
+        Saldo atual: R$${valor}`;
+    }
+
+
+</script>

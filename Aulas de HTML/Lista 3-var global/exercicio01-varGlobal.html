@@ -17,13 +17,26 @@
 <body>
     <h1>Atualizar salário</h1>
     <div id="div_result">
-        Salário aqui!
+        
     </div>
     <br>
     <button onclick="receber()">Receber 100</button>
     <button onclick="pagar()">Pagar 50</button>
+    
 </body>
 </html>
 <script>
+    let salario = 0;
 
+    function receber() {
+        salario += 100;
+
+        div_result.innerHTML = `Transferência de R$100 recebida! Saldo atual: R$${salario}`
+    }
+
+    function pagar() {
+        salario -= 50;
+
+        div_result.innerHTML = `Pagamento de R$50 efetuado! Saldo atual: R$${salario}`
+    }
 </script>
