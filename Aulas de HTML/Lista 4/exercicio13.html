@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 13</title>
+</head>
+<body>
+    <h1>Analisar sua conta corrente</h1>
+    <span>Saldo da conta: </span>
+    <input type="number" id="ipt_saldo">
+    <br>
+    <span>Valor do débito</span>
+    <input type="number" id="ipt_debito">
+    <br>
+    <button onclick="analisar()">Analisar conta</button>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+    function analisar() {
+        let n1 = Number(ipt_saldo.value)
+        let n2 = Number(ipt_debito.value)
+        let atual = n1 - n2
+
+        div_result.innerHTML = `<i style="color: blue">0 saldo atual da sua conta corrente é R$${atual}</i>`
+
+        if(atual < 0) {
+            div_result.innerHTML = `<b style="color: red">0 saldo atual da sua conta corrente é R$${atual}</b>`
+        }
+    }
+</script>

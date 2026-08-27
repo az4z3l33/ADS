@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10</title>
+</head>
+<body>
+    <h1>Escolhendo série</h1>
+    <span>Nome da serie: </span>
+    <input type="text" id="input_serie">
+    <br>
+    <span>Quantidade de episódios: </span>
+    <input type="number" id="input_eps">
+    <br>
+    <button onclick="verificar()">Verificar nível</button>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+    function verificar() {
+        let nome = input_serie.value
+        let qtdEps = Number(input_eps.value)
+        let minutos = qtdEps * 22
+        let horas = minutos / 60
+
+        div_result.innerHTML = `Vejo que você gosta de ${nome}<br>`
+
+        if(horas > 30) {
+            div_result.innerHTML += ` Uau, você realmente gosta dessa série!`
+        }
+    }
+</script>
