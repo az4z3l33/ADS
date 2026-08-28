@@ -12,5 +12,25 @@
     <br>
     <span>Quantas mulheres estão no elevador?: </span>
     <input type="number" id="input_mulheres">
+    <br>
+    <button onclick="ligar()">Ligar elevador</button>
+    <div id="div_result"></div>
 </body>
 </html>
+<script>
+    function ligar() {
+        let n1 = Number(input_homens.value)
+        let n2 = Number(input_mulheres.value)
+        let h = n1 * 90
+        let m = n2 * 70
+        let total = h + m
+        let resto = total - 500
+
+        if(total > 500) {
+            div_result.innerHTML = `<span style="color: red">Precisa perder ${resto}kg para mover o elevador</span>`
+        } else {
+            div_result.innerHTML = `<span style="color: green">Elevador vai se mover, pois está com ${total}kg</span>`
+        }
+
+    }
+</script>
