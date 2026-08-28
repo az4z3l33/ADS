@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Digite a distância percorrida em Km: </span>
+    <input type="text" id="iptKm">
+    <span>Digite a velocidade média percorrida: </span>
+    <input type="text" id="iptVm">
+    <button onclick="mostrar()">Simular</button>
+    <div id="div_exibir"></div>
+</body>
+<script>
+    let tank = 25;
+    function mostrar() {
+        let km = Number(iptKm.value);
+        let vm = Number(iptVm.value);
+        let DD = km*0.1;
+        let EE = (km*10)/25;
+        let FF = tank -= (km*0.1);
+        let GG = (FF*100)/25;
+        let mensagem;
+        if (tank >= (25*0.3)) {
+            mensagem = `Ao percorrer ${km} km, em velocidade média de ${vm} km/h, a viagem durou ${km/vm} horas. 
+            Ao todo, foram gastos ${DD} litros de combustível (${EE}%). 
+            <b>Restam ${FF} litros de combustível (${GG}%).</b><br><b>Continue a rodar!</b><br><br>`;
+        } else {
+            mensagem = `Ao percorrer ${km} km, em velocidade média de ${vm} km/h, a viagem durou ${km/vm} horas. 
+            Ao todo, foram gastos ${DD} litros de combustível (${EE}%). 
+            <b>Restam ${FF} litros de combustível (${GG}%).</b><br><b>É melhor parar para reabastecer!</b><br><br>`;
+        }
+        div_exibir.innerHTML += mensagem;
+    }
+</script>
+</html>

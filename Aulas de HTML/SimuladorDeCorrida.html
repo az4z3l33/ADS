@@ -6,37 +6,32 @@
     <title>Simulador de Corrida</title>
 </head>
 <body>
-    <label for="ipt_distancia">Insira distância percorrida: </label>
+    <span>Insira distância percorrida: </span>
     <input type="number" id="ipt_distancia">
     <br>
-    <label for="ipt_velocidade">Insira velocidade média: </label>
+    <span>Insira velocidade média: </span> 
     <input type="number" id="ipt_velocidade">
     <br>
-    <button onclick="simular()">Simular</button>
+    <button onclick="simulacao()">Simular</button>
     <div id="div_result"></div>
 </body>
 </html>
 <script>
-    // item d:
-        // 1 passo: calcular quantos litros gastou na corrida
-            // regra de 3 com: 10km - 1l
-                            // n2 - xL (o que vc quer descobrir)
-        // 2 passo: calcular isso em porcentagem
-            // regra de 3 com:
-                            // 25L (o maximo) - 100%
-                            // xL (do item anterior) - porcentagem desejada
-                // para colocar na formula, basta multiplicar em cruz e colocar o *formato* que fica, sempre isolando (deixando na esquerda) o que vc quer descobrir ;)
-    function simular() {
+
+    let combTotal = 25;
+    
+    function simulacao() {
         let n1 = Number(ipt_distancia.value)
         let n2 = Number(ipt_velocidade.value)
         let tempo = n1 / n2
         let comb = n1 / 10
-        let combPorcentagem = comb * 0.25
-        let combRestante = 25 - comb
-        let comRestantePorcentagem = combRestante * 0.25
+        let combPorcentagem = (comb * combTotal) / 100
+        let combRestante = combTotal - comb
+        let comRestantePorcentagem = (combRestante * combTotal) / 100
+        let mensagem;
 
-        div_result.innerHTML = `Ao percorrer ${n1}km, em velocidade média de ${n2}km/h, a viagem durou ${tempo} horas. Ao todo, foram gastos ${comb} litros de combustível(${combPorcentagem}%). Restam ${combRestante} litros de combustível(${combRestantePorcentagem}%)`
-        
+        mensagem = `Ao percorrer ${n1}km, em velocidade média de ${n2}km/h, a viagem durou ${tempo} horas. Ao todo, foram gastos ${comb} litros de combustível(${combPorcentagem}%). Restam ${combRestante} litros de combustível(${combRestantePorcentagem}%)`
+        div_result.innerHTML = mensagem
 
     }
 </script>
