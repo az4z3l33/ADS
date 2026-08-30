@@ -17,19 +17,20 @@
 </body>
 </html>
 <script>   
+    let combTotal = 25
+
     function simulacao() {
         let n1 = Number(ipt_distancia.value)
         let n2 = Number(ipt_velocidade.value)
-        let combTotal = 25
         let tempo = n1 / n2
         let comb = n1 / 10
-        let combPorcentagem = (comb * 100) / combTotal
+        let combPorcentagem = (comb * 100) / 25
         let combRestante = combTotal -= comb
-        let combRestantePorcentagem = (combRestante * 100) / combTotal
+        let combRestantePorcentagem = (combRestante * 100) / 25
 
         
 
-        if(combRestantePorcentagem >= 30) {
+        if(combRestante >= 7.5) {
             div_result.innerHTML += `Ao percorrer ${n1}km, em velocidade média de ${n2}km/h, a viagem durou ${tempo} horas. Ao todo, foram gastos ${comb} litros de combustível(${combPorcentagem}%). Restam ${combRestante} litros de combustível(${combRestantePorcentagem}%) <br> <b>Continue á rodar!</b>`
         } else {
             div_result.innerHTML += `Ao percorrer ${n1}km, em velocidade média de ${n2}km/h, a viagem durou ${tempo} horas. Ao todo, foram gastos ${comb} litros de combustível(${combPorcentagem}%). Restam ${combRestante} litros de combustível(${combRestantePorcentagem}%) <br> <b>É melhor parar para abastecer!</b>`
