@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ept-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+</head>
+<body>
+    <h1>Sua dieta está saudável?</h1>
+    <label for="ipt_pao">Informe quantos pães franceses você come por dia: </label>
+    <input type="text" id="ipt_pao">
+    <br>
+    <label for="ipt_bolacha">Informe quantos pacotes de bolacha você come por dia: </label>
+    <input type="text" id="ipt_bolacha">
+    <br>
+    <label for="ipt_copo">Informe quantos copos de achocolatado você toma por dia: </label>
+    <input type="text" id="ipt_copo">
+    <br>
+    <button onclick="verificar()">Verificar calorias</button>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+    function verificar() {
+        let n1 = Number(ipt_pao.value)
+        let n2 = Number(ipt_bolacha.value)
+        let n3 = Number(ipt_copo.value)
+        let pao = n1 * 50
+        let bolacha = n2 * 80
+        let copo = n3 * 70
+        let caloria = pao + bolacha + copo
+
+        if(caloria <= 200) {
+            div_result.innerHTML = `Parabéns, vai ficar em forma!`
+        } else if(caloria <= 400) {
+            div_result.innerHTML = `Cuidado, vai ficar menos saudável!`
+        } else {
+            div_result.innerHTML = `Alerta crítico de saúde !!!`
+        }
+
+    }
+</script>

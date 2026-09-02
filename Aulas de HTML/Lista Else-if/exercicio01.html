@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<body>
+    <h1>Descubra sua vantatem competitiva!</h1>
+    <label for="ipt_altura">Insira sua altura: </label>
+    <input type="text" id="ipt_altura">
+    <br>
+    <button onclick="verificar()">Analisar estatura</button>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+    function verificar() {
+        let n1 = Number(ipt_altura.value)
+
+        if(n1 <= 1.65) {
+            div_result.innerHTML = `Você pode ser piloto de corrida`
+        } else if(n1 <= 1.80) {
+            div_result.innerHTML = `Você pode ser jogador de futebol`
+        } else {
+            div_result.innerHTML = `Você pode ser jogador de vôlei ou basquete`
+        }
+    }
+</script>

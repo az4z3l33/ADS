@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 11</title>
+</head>
+<body>
+    <h1>Controle da umidadade do ar</h1>
+    <label for="ipt_umidade">Informe a umidade do ambiente: </label>
+    <input type="text" id="ipt_umidade">
+    <br>
+    <button onclick="verificar()">Verificar umidade</button>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+    function verificar() {
+        let n1 = Number(ipt_umidade.value)
+
+        if(n1 < 12) {
+            div_result.innerHTML = `Estado de emergencia`
+        }else if(n1 <=20) {
+            div_result.innerHTML = `Estado de alerta`
+        }else if(n1 <=30) {
+            div_result.innerHTML = `Estado de atenção`
+        }else {
+            div_result.innerHTML = `Nenhum risco`
+        }
+    }
+</script>

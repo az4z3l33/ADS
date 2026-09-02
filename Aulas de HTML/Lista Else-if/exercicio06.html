@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+</head>
+<body>
+    <h1>O canto da sua torcida!</h1>
+    <label for="ipt_time">Qual o seu time: </label>
+    <input type="text" id="ipt_time">
+    <br>
+    <button onclick="sobre()">Fale sobre esse time</button>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+    function sobre() {
+        let time = ipt_time.value
+
+        if( time == 'Corinthians') {
+            div_result.innerHTML = `<span style="background-color: black; color: white;">Salve o Corinthians</span>`
+        } else if(time == 'Palmeiras') {
+            div_result.innerHTML = `<span style="background-color: green; color: white;">Salve o alviverde imponente</span>`
+        } else if(time == 'Santos') {
+            div_result.innerHTML = `<span style="background-color: white; color: black;">Agora quem dá a bola é o Santos</span>`
+        } else if(time == 'São Paulo') {
+            div_result.innerHTML = `<span style="background-color: black; color: red;">Salve o Tricolor paulista</span>`
+        }
+    }
+</script> 
