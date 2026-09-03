@@ -25,9 +25,9 @@
 
         if(n1 <= n2) {
             div_result.innerHTML = `Velocidade dentro do limite. Boa direção!`
-        }else if(n2 <= percentual) {
+        }else if(n1 <= percentual) {
             div_result.innerHTML = `Atenção! Excedendo o limite permitido`
-        } else if(n2 > percentual){
+        } else if(n1 > percentual){
             div_result.innerHTML = `Multa grave! Velocidade muito acima do permitido`
         }
 

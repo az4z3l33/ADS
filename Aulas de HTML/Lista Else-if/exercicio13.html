@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 13</title>
+</head>
+<body>
+    <h1>Pokemon!</h1>
+    <label for="ipt_poke">Escolha um inicial da primeira geração: </label>
+    <input type="text" id="ipt_poke">
+    <br>
+    <button onclick="escolher()">Escolher Pokemon</button>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+    function escolher() {
+        let parceiro = ipt_poke.value
+
+        if(parceiro == 'Bulbasaur') {
+            div_result.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5edjoOuXiy7jUrdQWp3vaFwfJcDCTqbMg32Uf887ucg&s=10" alt="">`
+        } else if(parceiro == 'Squirtle') {
+            div_result.innerHTML=`<img src="https://img.pokemondb.net/artwork/large/squirtle.jpg" alt="">`
+        } else if(parceiro == 'Charmander') {
+            div_result.innerHTML=`<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyyP_7K_Oq4VsRPII4ygI2NIUtcVxyqrS0ePF5xp-Hmg&s" alt="">`
+        } else {
+            div_result.innerHTML=`Pokémon não reconhecido`
+        }
+    }
+</script>

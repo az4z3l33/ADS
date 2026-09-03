@@ -17,7 +17,18 @@
 <script>
     function multiplo() {
         let n1 = Number(ipt_n1.value)
+        let resto = n1 % 5
 
-        
+        if(resto == 0) {
+            div_result.innerHTML=`Perfeito, esse número é múltiplo de cinco`
+        } else if(resto == 1) {
+            div_result.innerHTML=`Vich, sobrou um`
+        } else if(resto == 2) {
+            div_result.innerHTML=`Para esse o resto é dois`
+        } else if (resto == 3) {
+            div_result.innerHTML=`Com mais dois daria certo`
+        } else if(resto == 4) {
+            div_result.innerHTML=`Só faltou 1 para ser múltiplo de 5`
+        }
     }
 </script>

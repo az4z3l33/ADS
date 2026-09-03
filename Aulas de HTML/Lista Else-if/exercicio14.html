@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 14</title>
+</head>
+<body>
+    <h1>Representando seu humor!</h1>
+    <label for="ipt_humor">Insira seu humor de hoje: </label>
+    <input type="text" id="ipt_humor">
+    <br>
+    <button onclick="mostrar()">Mostrar Humor</button>
+    <div id="div_result"></div>
+    <img src="" alt="">
+</body>
+</html>
+<script>
+    function mostrar() {
+        let humor = ipt_humor.value
+
+        if(humor == 'Feliz') {
+            div_result.innerHTML=`<img src="https://st.depositphotos.com/1001911/55508/v/450/depositphotos_555089554-stock-illustration-happy-emoji-emoticon-showing-double.jpg" alt="">`
+        }else if(humor == 'Triste') {
+            div_result.innerHTML=`<img src="https://img.pikbest.com/backgrounds/20250814/sad-emoji-with-tears-streaming-down-its-face-isolated-on-white-background_11826817.jpg!w700wp" alt="">`
+        }else if(humor == 'Bravo') {
+            div_result.innerHTML=`<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROj3BgX-5MXBlKjXZu2HnTtDObIURaZKqi8ioQQ6cItw&s=10" alt="">`
+        }else if(humor == 'Surpreso') {
+            div_result.innerHTML=`<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU5NgnNHdGcIIiYZZAZKhVSqt3tOdoZzeTIByyypMBeA&s=10" alt="">`
+        }else if(humor == 'Cansado') {
+            div_result.innerHTML=`<img src="https://images.emojiterra.com/google/noto-emoji/unicode-17.0/color/share/1fae9.jpg" alt="">`
+        } }
+</script>
