@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+    <label for="select_form">Forma de pagamento: </label>
+    <select id="select_form">
+        <option disabled selected>Selecione uma forma de pagamento</option>
+        <option>Dinheiro</option>
+        <option>Débito</option>
+        <option>Crédito</option>
+        <option>Boleto</option>
+    </select>
+    <br>
+    <button onclick="verificar()">Analisar compra</button>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+    function verificar() {
+        let forma = select_form.value;
+
+        if(forma == 'Dinheiro' || forma == 'Débito') {
+            div_result.innerHTML=`Você terá que pagar a vista`
+        }else{
+            div_result.innerHTML=`Pagamento poderá ser parcelado`
+        }
+    }
+</script>
