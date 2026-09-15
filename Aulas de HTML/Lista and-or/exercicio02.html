@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <h1>Simulador de preferência de compras</h1>
+    <label for="ipt_tamanho">Tamanho da tela: </label>
+    <input type="number" id="ipt_tamanho">
+    <br>
+    <label for="slc_cores">Cor da tela: </label>
+    <select id="slc_cores">
+        <option value="#" disabled selected>Selecione uma cor</option>
+        <option>Preto</option>
+        <option>Prata</option>
+        <option>Azul</option>
+        <option>Vermelho</option>
+    </select>
+    <br>
+    <button onclick="avaliar()">Será que ele gosta?</button>
+    <div id="div_result"></div>
+    
+</body>
+</html>
+<script>
+    function avaliar() {
+        let tamanho = Number(ipt_tamanho.value);
+        let cor = slc_cores.value
+
+        if(tamanho > 8.5 && cor == 'Preto' || cor == 'Prata'){
+            div_result.innerHTL=`<img src="https://st.depositphotos.com/1001911/55508/v/450/depositphotos_555089554-stock-illustration-happy-emoji-emoticon-showing-double.jpg">`
+        } else {
+            div_result.innerHTL=`<img src="https://thumbs.dreamstime.com/b/emoticon-para-fora-soprado-dos-mordentes-85080614.jpg">`
+        }
+    }
+</script>
