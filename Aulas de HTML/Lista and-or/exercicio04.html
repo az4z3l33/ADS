@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+    <h1>Bando Melete</h1>
+    <label for="ipt_login">Login: </label>
+    <input type="text" id="ipt_login" placeholder="Insira seu Login">
+    <br>
+    <label for="ipt_senha">Senha: </label>
+    <input type="password" id="ipt_senha" placeholder="Insira sua senha">
+    <br>
+    <label for="ipt_info">Verificação de dois fatores: </label>
+    <input type="text" id="ipt_info" placeholder="Insira o nome do seu pet">
+    <br>
+    <button onclick="Autenticar()">Autenticar</button>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+    function Autenticar() {
+        let login = ipt_login.value
+        let senha = ipt_senha.value
+        let info = ipt_info.value
+
+        if(login == 'ana' && senha == 'braga' && info == 'louro josé') {
+            div_result.innerHTML=`Usuário autenticado`
+        } else {
+            div_result.innerHTML=`Falha na autenticação`
+        }
+    }
+</script>

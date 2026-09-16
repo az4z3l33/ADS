@@ -11,29 +11,35 @@
     <select name="" id="slc_tipo">
         <option value="#" selected disabled>Selecione uma opção</option>
         <option>Comum</option>
-        <option>Estudande</option>
+        <option>Estudante</option>
         <option value="Idoso">Idoso/PNE</option>
     </select>
     <br>
     <label for="slc_passagen">Tipo de passagem</label>
     <select id="slc_passagem">
         <option value="#" selected disabled>Selecione um tipo de passagem</option>
-        <option value="unica">Passagem única</option>
-        <option value="integracao">Passagem integração</option>
-        <br>
+        <option value="4.40">Passagem única</option>
+        <option value="5.90">Passagem integração</option>
+    </select>
+    <br>
         <button onclick="simular()">Simular preço</button>
         <div id="div_result"></div>
-    </select>
 
 </body>
 </html>
 <script>
     function simular() {
-        let passagem = slc_passagem.value
+        let passagem = Number(slc_passagem.value)
         let tipo = slc_tipo.value
+        let descEstudante = passagem - (passagem / 2)
 
-        if(tipo == Comum && passagem == unica){
-            
+        if(tipo == 'Comum' && (passagem == 4.40 || passagem == 5.90)){
+            div_result.innerHTML=`Valor da passagem escolhida R$${passagem}`
+        } else if(tipo == 'Estudante' && (passagem == 4.40 || passagem == 5.90)){
+            div_result.innerHTML=`Valor da passagem R$${descEstudante}<br>
+            Desconto de estudante aplicado`
+        } else if(tipo == 'Idoso'){
+            div_result.innerHTML=`Gratuidade aplicada!`
         }
     }
 </script>

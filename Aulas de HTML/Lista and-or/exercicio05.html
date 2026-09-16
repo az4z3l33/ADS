@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <h1>Avaliação do Clima</h1>
+    <label for="ipt_temp">Temperatura: </label>
+    <input type="text" id="ipt_temp" placeholder="Insira a temperatura atual">
+    <br>
+    <label for="ipt_umi">Umidade do ar: </label>
+    <input type="text" id="ipt_umi" placeholder="Insira a umidade do ar">
+    <br>
+    <button onclick="avaliar()">Avaliar clima</button>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+    function avaliar() {
+        let temp = Number(ipt_temp.value);
+        let umi = Number(ipt_umi.value);
+
+        if(umi < 0 || umi > 100) {
+            alert('Valor de umidade inválido')
+
+            div_result.innerHTML=``
+        }else if(temp >= 22 && temp <= 23 && umi < 60){
+            div_result.innerHTML=`Clima agradável`
+        }else{
+            div_result.innerHTML=`Clima desconfortável`
+        }
+    }
+</script>
