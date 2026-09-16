@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio 2</title>
+    <style>
+        img {
+            width: 400px;
+        }
+    </style>
 </head>
 <body>
     <h1>Simulador de preferência de compras</h1>
@@ -21,7 +26,7 @@
     <br>
     <button onclick="avaliar()">Será que ele gosta?</button>
     <div id="div_result"></div>
-    
+
 </body>
 </html>
 <script>
@@ -29,10 +34,10 @@
         let tamanho = Number(ipt_tamanho.value);
         let cor = slc_cores.value
 
-        if(tamanho > 8.5 && cor == 'Preto' || cor == 'Prata'){
-            div_result.innerHTL=`<img src="https://st.depositphotos.com/1001911/55508/v/450/depositphotos_555089554-stock-illustration-happy-emoji-emoticon-showing-double.jpg">`
+        if(tamanho > 6.5 && cor == 'Preto' || cor == 'Prata'){
+            div_result.innerHTML=`<img src="https://st.depositphotos.com/1001911/55508/v/450/depositphotos_555089554-stock-illustration-happy-emoji-emoticon-showing-double.jpg">`
         } else {
-            div_result.innerHTL=`<img src="https://thumbs.dreamstime.com/b/emoticon-para-fora-soprado-dos-mordentes-85080614.jpg">`
+            div_result.innerHTML=`<img src="https://thumbs.dreamstime.com/b/emoticon-para-fora-soprado-dos-mordentes-85080614.jpg">`
         }
     }
 </script>

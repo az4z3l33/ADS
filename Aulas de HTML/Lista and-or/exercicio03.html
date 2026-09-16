@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    <h1>Bilhete Único</h1>
+    <label for="slc_tipo">Tipo de Passageiro</label>
+    <select name="" id="slc_tipo">
+        <option value="#" selected disabled>Selecione uma opção</option>
+        <option>Comum</option>
+        <option>Estudande</option>
+        <option value="Idoso">Idoso/PNE</option>
+    </select>
+    <br>
+    <label for="slc_passagen">Tipo de passagem</label>
+    <select id="slc_passagem">
+        <option value="#" selected disabled>Selecione um tipo de passagem</option>
+        <option value="unica">Passagem única</option>
+        <option value="integracao">Passagem integração</option>
+        <br>
+        <button onclick="simular()">Simular preço</button>
+        <div id="div_result"></div>
+    </select>
+
+</body>
+</html>
+<script>
+    function simular() {
+        let passagem = slc_passagem.value
+        let tipo = slc_tipo.value
+
+        if(tipo == Comum && passagem == unica){
+            
+        }
+    }
+</script>
