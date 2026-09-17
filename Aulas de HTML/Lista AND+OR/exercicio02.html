@@ -19,8 +19,8 @@
     <label for="slc_divida">Possui dívidas em aberto? </label>
     <select id="slc_divida">
         <option value="#" disabled selected>Selecione uma opção</option>
-        <option>Sim</option>
-        <option>Não</option>
+        <option value="1">Sim</option>
+        <option value="2">Não</option>
     </select>
     <br>
     <button onclick="analisar()">Analisar crédito</button>
@@ -30,10 +30,10 @@
     function analisar() {
         let renda = Number(ipt_renda.value);
         let score = Number(ipt_score.value);
-        let correntista = Number(ipt_corre);
+        let correntista = Number(ipt_corre.value);
         let divida = slc_divida.value;
 
-        if(renda >= 3000 && score >= 600 || (correntista >= 5 && divida == 'Não')) {
+        if((renda >= 3000 && score >= 600) || (correntista >= 5 && divida == '2')) {
             alert('Empréstimo aprovado')
         } else {
             alert('Empréstimo negado')
