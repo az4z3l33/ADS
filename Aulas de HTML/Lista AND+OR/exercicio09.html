@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9</title>
+</head>
+<body>
+    <h1>Acesso á academia 24 horas</h1>
+    <label for="slc_plano">Qual o seu plano: </label>
+    <select id="slc_plano">
+        <option value="#" selected disabled>Selecione seu plano</option>
+        <option value="1">Premium</option>
+        <option value="2">Básico</option>
+    </select>
+    <br>
+    <label for="ipt_horas">Hora atual: </label>
+    <input type="number" id="ipt_horas">
+    <br>
+    <label for="slc_check">Check-in biométrico validado? </label>
+    <select id="slc_check">
+        <option value="#" selected disabled>Selecione uma opção</option>
+        <option value="1">Sim</option>
+        <option value="2">Não</option>
+    </select>
+    <br>
+    <button onclick="liberar()">Liberar catraca</button>
+</body>
+</html>
+<script>
+    function liberar() {
+        let plano = slc_plano.value;
+        let horas = Number(ipt_horas.value);
+        let check = slc_check.value;
+
+        if(check == 1 && (plano == 1 || (plano == 2 && horas >= 6 && horas <= 22))) {
+            alert('Acesso liberado')
+        }else {
+            alert('Acesso negado')
+        }
+    }
+</script>

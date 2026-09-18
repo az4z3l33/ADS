@@ -7,5 +7,36 @@
 </head>
 <body>
     <h1>Promoção relâmpago</h1>
+    <label for="ipt_itens">Itens comprados: </label>
+    <input type="number" id="ipt_itens">
+    <br>
+    <label for="ipt_valor">Valor total da compra: </label>
+    <input type="number" id="ipt_valor">
+    <br>
+    <label for="slc_fideli">Faz parte do programa fidelidade? </label>
+    <select id="slc_fideli">
+        <option value="#" selected disabled>Selecione uma opção</option>
+        <option value="1">Sim</option>
+        <option value="2">Não</option>
+    </select>
+    <br>
+    <label for="ipt_promo">Cupom: </label>
+    <input type="text" id="ipt_promo">
+    <br>
+    <button onclick="aplicar()">Aplicar desconto</button>
 </body>
 </html>
+<script>
+    function aplicar() {
+        let itens = Number(ipt_itens.value);
+        let valor = Number(ipt_valor.value);
+        let fidelidade = slc_fideli.value;
+        let promo = ipt_promo.value;
+
+        if(valor >= 50 && itens >= 3 && (fidelidade == 1 || promo == 'PROMO10')) {
+            alert('Desconto aplicado!')
+        }else {
+            alert('Compra não elegível para desconto')
+        }
+    }
+</script>
